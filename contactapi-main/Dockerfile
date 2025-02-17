@@ -25,8 +25,8 @@ WORKDIR /app
 COPY --from=builder /app/target/ /app/target/
 RUN ls -al /app/target/
 
-# Step 7: Copy the JAR from the build stage
-COPY --from=builder /app/target/contactapp.jar /app/contactapp.jar
+# Step 7: Copy the correct JAR file from the build stage
+COPY --from=builder /app/target/contactapi-0.0.1-SNAPSHOT.jar /app/contactapp.jar
 
 # Step 8: Command to run the application
 CMD ["java", "-jar", "/app/contactapp.jar"]
