@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://20.51.248.25:5432/postgresapp
     username: postgres
-    password: postgres
+    password: admin@123
   jpa:
     database-platform: org.hibernate.dialect.PosgreSQLDialect
     generate-ddl: true
